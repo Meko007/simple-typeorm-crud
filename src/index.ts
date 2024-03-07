@@ -10,13 +10,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1', product);
 
 AppDataSource.initialize()
-    .then(() => console.log('synchronized'))
-    .catch((error) => console.error(error)); 
+	.then(() => console.log('synchronized'))
+	.catch((error) => console.error(error)); 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+	res.send('Hello World!');
 });
 
 app.listen(3000, () => {
-    console.log('server is listening on port 3000');
+	console.log('server is listening on port 3000');
 });
